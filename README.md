@@ -64,19 +64,17 @@ This module provides a CLI workflow: load dataset, accept trip request, generate
 
 ## Feasibility Study
 
-## Feasibility Study (Aligned to Course Schedule)
-- **Draft Proposal (Tue, Jan 20):** Finalize system theme, module I/O, and dataset schema.
-- **Final Proposal (Mon, Jan 26):** Freeze module specs, city scope, and test plan.
+_A timeline showing that each module's prerequisites align with the course schedule. Verify that you are not planning to implement content before it is taught._
 
-**Project 2 Implementation**
-- **Checkpoint 1 (Wed, Feb 11):** Complete Modules 1–2. Deliver CLI that parses TripSpec, loads POIs, and filters open/affordable candidates.
-- **Checkpoint 2 (Thu, Feb 26):** Complete Module 3. Deliver ranked POI recommendations with score breakdown and reason codes.
-- **Checkpoint 3 (Thu, Mar 19):** Complete Module 4. Deliver feasible itinerary planning using greedy/beam search with time/budget constraints.
-- **Checkpoint 4 (Thu, Apr 2):** Complete Module 5. Deliver evaluation metrics and feasibility reporting; add integration tests.
-- **Checkpoint 5 (Thu, Apr 16):** Complete Module 6 integration and explanation improvements; add “swap alternatives” feature; polish code quality and tests.
-- **Draft Demo (Mon, Apr 20) / Final Demo (Thu, Apr 23):** End-to-end demos with at least two cities and multiple example requests.
-     |                  |                |
+| Module | Required Topic(s) | Topic Covered By | Checkpoint Due |
+| ------ | ----------------- | ---------------- | -------------- |
+| 1 (TripSpec Parser & Preference Model) | Python basics, data structures, knowledge representation (simple structured objects) | By early course / before CP1 (representation is minimal: dataclasses + validation) | Checkpoint 1 — Wed, Feb 11 |
+| 2 (POI Knowledge Base) | Knowledge bases / representation; file I/O; filtering | By early course / before CP1 | Checkpoint 1 — Wed, Feb 11 |
+| 3 (Candidate Retrieval & Heuristic Scoring) | Heuristics / utility scoring; basic search over candidates (ranking) | By CP2 (after intro representation; heuristics typically introduced early-mid) | Checkpoint 2 — Thu, Feb 26 |
+| 4 (Itinerary Planner: Search Under Constraints) | Search/planning methods (greedy/beam search); constraint satisfaction (time/budget feasibility) | By CP3 (search is a core early-mid topic; planning/search alignment) | Checkpoint 3 — Thu, Mar 19 |
+| 5 (Time & Budget Estimation + Evaluation Metrics) | Evaluation metrics; testing & reporting; basic analysis | By CP4 (evaluation is usually available by mid-course; no ML required) | Checkpoint 4 — Thu, Apr 2 |
+| 6 (Explanation + CLI Integration) | Agent interaction / explainable output; system integration practices | By CP5 (does not require new AI theory; mostly integration + explanation) | Checkpoint 5 — Thu, Apr 16 |
+
 
 ## Coverage Rationale
-
 Itinera AI covers six AI-relevant areas in a coherent pipeline: (1) knowledge representation (TripSpec + POI schema), (2) knowledge bases (POI dataset/index), (3) heuristic decision-making (scoring and trade-offs), (4) search/planning under constraints (itinerary construction), (5) evaluation metrics (time/budget feasibility and reports), and (6) explainable, agent-facing interaction (reason codes and CLI output). These topics combine naturally to produce intelligent behavior: selecting good options, forming a plan that fits constraints, and justifying decisions to the user.
